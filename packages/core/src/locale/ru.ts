@@ -13909,13 +13909,13 @@ export default {
     },
   ],
   fontFamily: {
-    MicrosoftYaHei: "YaHei",
+    "system-ui": "System",
   },
-  fontarray: ["Times New Roman", "Arial", "Tahoma", "Verdana"],
+  fontarray: ["system-ui", "Segoe UI", "Arial", "Verdana"],
   fontjson: {
-    "times new roman": 0,
-    arial: 1,
-    tahoma: 2,
+    "system-ui": 0,
+    "segoe ui": 1,
+    arial: 2,
     verdana: 3,
   },
   border: {

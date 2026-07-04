@@ -52,7 +52,7 @@ function getTextSize(text: string, font: string) {
 }
 
 export function defaultFont(defaultFontSize: number) {
-  return `normal normal normal ${defaultFontSize}pt "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC",  "WenQuanYi Micro Hei", sans-serif`;
+  return `normal normal normal ${defaultFontSize}pt system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`;
 }
 
 export function getFontSet(
@@ -87,11 +87,11 @@ export function getFontSet(
       fontAttr.push(`${Math.ceil(format.fs)}pt`);
     }
 
-    let fontSet = `"Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif`;
+    let fontSet = `system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`;
     if (ctx) {
       const { fontarray } = locale(ctx);
       if (!format.ff) {
-        fontSet = `${fontarray[0]},${fontSet}`;
+        // keep default fontSet (system-ui)
       } else {
         let fontfamily = null;
         if (ctx) {
